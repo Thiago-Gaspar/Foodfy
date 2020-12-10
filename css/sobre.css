@@ -1,138 +1,126 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif; 
-    
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  background-color: white;
+ 
 }
 
 :root {
-    font-size: 62.5%;
-  }
-
-#page-sobre {
-   
-    display: flex;
-    min-height: 100vh;
+  font-size: 62.5%;
 }
 
-.sidebar {
-    min-height: 95%;
-    width: 23rem;
-    background: white;
-
+.main {
+  max-width: 94rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
 }
 
-.container-top {
-    display: flex;
-    width: 100%;
+header {
+  padding-top: 3.1rem;
+  display: flex;
+  width: 100%;
 }
 
-.logo {
-    margin: 3.1rem 12rem 0 0;
-    width: 9.4rem;
-    height: 3.2rem;
+header img {
+  margin-right: 12.4rem;
+  width: 9.4rem;
+  height: 3.2rem;
 }
 
-.link-sobre {
-    margin-top: 3.8rem;
-    margin-right: 3.0rem;
-    width: 4.3rem;
-    height: 1.9rem;
+header div {
+  padding-top: 0.7rem;
 }
 
-.link-sobre a{
-    
-    text-decoration: none;
-    font-size: 1.6rem;
-    color: #111111;
-    font: 700 1.6rem 'Roboto', sans-serif;
-    opacity: 100%;
+.sobre {
+  padding-right: 3rem;
+  text-decoration: none;
+  width: 4.3rem;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  font: 700 1.6rem "Roboto", sans-serif;
+  color: #111111;
 }
 
-.link-receitas {
-    margin-top: 3.8rem;
-    width: 6.2rem;
-    height: 1.9rem;
-}
-
-.link-receitas a{
-    
-    text-decoration: none;
-    font-size: 1.6rem;
-    color: #111111;
-    font: 400 1.6rem 'Roboto', sans-serif;
-    opacity: 100%;
+.receitas {
+  text-decoration: none;
+  width: 6.2rem;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  font: 400 1.6rem "Roboto", sans-serif;
+  color: #111111;
 }
 
 .sobre-foodfy {
-    margin: 5rem 0 0 0;
-    font: 700 2.4rem 'Roboto', sans-serif;
-    width: 16.4rem;
+  margin: 5rem 0 0 0;
+  font-weight: 700;
+  font-size: 2.4rem;
+  width: 16.4rem;
 }
 
-.first-text {
-    width: 94rem;
-    height: 28rem;
-    margin: 2rem 23rem 0 0;
-    display: inline-block;
-    
+.text {
+  max-width: 94rem;
+  height: 28rem;
+  margin-top: 2rem;
+  display: inline-block;
 }
 
-.first-text p{
-    
-    line-height: 2.8rem;
-    letter-spacing: 0;
-    color: #444444;
-    font: 400 1.8rem 'Roboto', sans-serif;
-   
+.text p {
+  line-height: 2.8rem;
+  letter-spacing: 0;
+  color: #444444;
+  font-weight: 400;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-top: 0;
+  
 }
-
 
 .como-tudo {
-    margin: 0.5rem 0 0 0;
-    font: 700 2rem 'Roboto', sans-serif;
-    width: 20.5rem;
-}
-
-.second-text {
-    width: 94rem;
-    height: 28rem;
-    margin: 2rem 23rem 0 0;
-    display: inline-block;
-}
-
-.second-text p{
-    
-    line-height: 2.8rem;
-    letter-spacing: 0;
-    color: #444444;
-    font: 400 1.8rem 'Roboto', sans-serif;
-
-}
-
-.third-text {
-    width: 94rem;
-    height: 28rem;
-    margin: 2rem 23rem 0 0;
-    display: inline-block;
-}
-
-.third-text p{
-    
-    line-height: 2.8rem;
-    letter-spacing: 0;
-    color: #444444;
-    font: 400 1.8rem 'Roboto', sans-serif;
+  margin: 3rem 0 0 0;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 20.5rem;
 }
 
 .nossas-receitas {
-    margin: 0.5rem 0 0 0;
-    font: 700 2rem 'Roboto', sans-serif;
-    width: 20.5rem;
+  margin: 1.2rem 0 0 0;
+  font: 700 2rem "Roboto", sans-serif;
+  width: 20.5rem;
 }
 
-.rodape {
-    width: 100%;
-    height: 6.2rem;
-    background: #EEEEEE;
+.mini-text {
+  width: 94rem;
+  height: 11.2rem;
+  margin-top: 2rem;
+}
+
+.mini-text p {
+  line-height: 2.8rem;
+  letter-spacing: 0;
+  color: #444444;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+footer {
+  width: 100%;
+  height: 6.2rem;
+  background: #eeeeee;
+  position: absolute;
+  top: 1007px;
+  margin-top: 50px;
+  display: flex;
+}
+
+footer p {
+    margin: 0 auto;
+    padding: 2.3rem;
+    font-size: 14px;
+    color: #999999;
 }
