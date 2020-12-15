@@ -13,18 +13,18 @@ body {
   font-size: 62.5%;
 }
 
-.main {
-  max-width: 94rem;
+#page-about {
   margin: 0 auto;
+  max-width: 94rem;
   display: flex;
   flex-direction: column;
-  
 }
 
 header {
   padding-top: 3.1rem;
   display: flex;
   width: 100%;
+  
 }
 
 header img {
@@ -37,36 +37,46 @@ header div {
   padding-top: 0.7rem;
 }
 
-.sobre {
+.about {
   padding-right: 3rem;
   text-decoration: none;
   width: 4.3rem;
   height: 1.9rem;
   line-height: 1.9rem;
-  font: 700 1.6rem "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700; 
   color: #111111;
 }
 
-.receitas {
+.recepies {
   text-decoration: none;
   width: 6.2rem;
   height: 1.9rem;
   line-height: 1.9rem;
-  font: 400 1.6rem "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
   color: #111111;
 }
 
-.sobre-foodfy {
-  margin: 5rem 0 0 0;
+
+.about-foodfy {
+  width: 100%;
+  height: 2.8rem;
+  margin-top: 5rem;
+  
+}
+
+.about-foodfy h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #111111;
   font-weight: 700;
-  font-size: 2.4rem;
-  width: 16.4rem;
+
 }
 
 .text {
-  max-width: 94rem;
-  height: 28rem;
-  margin-top: 2rem;
+  
+  margin-top: 0.5rem;
   display: inline-block;
 }
 
@@ -76,44 +86,30 @@ header div {
   color: #444444;
   font-weight: 400;
   font-size: 18px;
-  box-sizing: border-box;
-  margin-top: 0;
+  margin: 1.5rem 0 0 0;
   
 }
 
-.como-tudo {
-  margin: 3rem 0 0 0;
+.mid-title {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 3rem;
+}
+
+.mid-title h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #111111;
   font-weight: 700;
-  font-size: 2rem;
-  width: 20.5rem;
 }
 
-.nossas-receitas {
-  margin: 1.2rem 0 0 0;
-  font: 700 2rem "Roboto", sans-serif;
-  width: 20.5rem;
-}
-
-.mini-text {
-  width: 94rem;
-  height: 28rem;
-  margin-top: 2rem;
-}
-
-.mini-text p {
-  line-height: 2.8rem;
-  letter-spacing: 0;
-  color: #444444;
-  font-weight: 400;
-  font-size: 1.8rem;
-}
 
 footer {
   width: 100%;
   height: 6.2rem;
   background: #eeeeee;
   position: absolute;
-  top: 1007px;
+  top: 100%;
   margin-top: 50px;
   display: flex;
 }
