@@ -1,0 +1,238 @@
+body {
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto-regular", sans-serif;
+    position: relative;
+    background-color: white;
+    
+
+}
+
+:root { 
+    font-size: 62.5%;
+}
+
+#page-recipes {
+    margin: 0 auto;
+    max-width: 94rem;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding-top: 3.1rem;
+    display: flex;
+    width: 100%;
+    
+  }
+  
+  header img {
+    margin-right: 12.4rem;
+    width: 9.4rem;
+    height: 3.2rem;
+  }
+  
+  header div {
+    padding-top: 0.7rem;
+  }
+
+  .about {
+    padding-right: 3rem;
+    text-decoration: none;
+    width: 4.3rem;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    font-size: 1.6rem;
+    font-weight: 400; 
+    color: #111111;
+  }
+  
+  .recipes {
+    text-decoration: none;
+    width: 6.2rem;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .cards {
+    
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 94rem;
+    height: 100%;
+  }
+    
+
+.card {
+    width: 100%;
+    height: 21rem;
+    margin-top: 30px;
+
+}
+
+.card_image{
+    width: 30rem;
+    height: 14rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.card img{
+  width: 30rem;
+  height: 14rem;
+  border-radius: 12px;
+}
+
+.card_title h1 {
+    width: 26rem;
+    height: 2.1rem;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 0;
+    opacity: 100%;  
+    color: #111111;
+    margin: 2rem 0 0.5rem 0;
+}
+
+.card_author p{
+    width: 13rem;
+    height: 1.4rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    opacity: 100%;  
+    color: #777777;
+    margin: 0;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 6.2rem;
+    background: #eeeeee;
+    position: absolute;
+    top: 100%;
+    margin-top: 50px;
+    display: flex;
+    right: 0;
+   
+  }
+  
+  footer p {
+      margin: 0 auto;
+      padding: 2.3rem;
+      font-size: 14px;
+      color: #999999;
+  }
+
+  /* MODAL */
+
+  .modal-overlay {
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    right: 0;
+    opacity: 0;
+    visibility: hidden; 
+}
+
+.modal {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  width: 66rem;
+  height: 41.3rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -20.6rem;
+  margin-left: -33rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MODAL ACTIVE */
+
+
+.modal-overlay.active {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6); 
+  visibility: visible;
+
+}
+
+.modal .card_image {
+  width: 100%;
+  height: 23rem;
+}
+
+.modal .card_image img {
+  width: 60rem;
+  height: 20rem;
+  position: absolute;
+  border-radius: 15px;
+  margin: 3rem;
+}
+
+.modal .card_title {
+  margin-top: 2rem;
+  width: 100%;
+  height: 3rem;
+}
+
+.modal .card_title h1 {
+ font-size: 24px;
+ color: #111111;
+ text-align: center;
+ width: 100%;
+ line-height:28px;
+ margin: 0;
+ font-weight: 400;
+  
+ 
+}
+
+.modal .card_author {
+  width: 100%;
+  height: 2.5rem;
+  
+}
+
+.modal .card_author p{
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  line-height: 21px;
+  font-size: 18px;
+  
+}
+
+
+.close {
+  width: 9.8rem;
+  height: 1.9rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 28.1rem;
+}
+
+.close p {
+  color: #999999;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.close a {
+  cursor: pointer;
+}

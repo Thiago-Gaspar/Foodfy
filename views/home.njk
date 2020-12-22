@@ -1,0 +1,90 @@
+{% extends "layout.njk"%}
+
+<!DOCTYPE html>
+<html>
+   {% block head %}
+        <link rel="stylesheet" href="/home.css">
+        <link rel="icon" href="/images/chef.png">
+        
+        <title>
+            Home - Foodfy
+        </title>
+    
+{% endblock %}
+   
+   {% block content %}
+    <body>
+            <div id="homepage">
+                
+                <header>
+                    <a href="home.njk"><img src="/images/logo.png" alt="Logo"> </a>      
+            
+                  <div>
+                    <a class="about" href="about.njk">Sobre</a>
+                    <a class="recipes" href="recipes.njk">Receitas</a>
+                  </div>
+                </header>
+                 
+             
+           
+            <div class="rectangle">
+                <div class="best-recipes">
+                    <h1>As melhores receitas</h1>
+                </div>
+
+                <div class="text-best-recipes">
+                    <p>Aprenda a construir os melhores pratos</p> 
+                        <p>com receitas criadas por profissionais</p>
+                            <p>do mundo inteiro.</p> 
+                </div>
+                    <div class="chef">
+                        <img src="/images/chef.png" alt="Chef">
+                    </div>
+            </div>
+
+            <div class="mid-title">
+                <p>Mais acessadas</p>
+            </div>
+
+            <div class="cards">
+                      {% for item in items %}
+                <div class="card">  
+                  <div class="card_image">
+                    <img src="{{item.image}}" alt="Burger"/>
+                  </div>
+                  <div class="card_title"><h1>{{item.title}}</h1></div>
+                  <div class="card_author"><p>{{item.author}}</p></div>
+                </div>
+                      {% endfor %}
+                  </div>
+              
+
+                     <footer>
+                      <p>Todos direitos reservados, receitas Foodfy.</p>
+                     </footer>
+
+                     <div class="modal-overlay">
+                        <div class="modal">
+                         
+                          <div class="card_image">
+                            <img src="" alt=""/>
+                          </div>
+                          <div class="card_title"><h1></h1></div>
+                          <div class="card_author"><p></p></div>
+                         
+                          <div class="close">
+                            <a><p>Fechar Modal</p></a>
+                          </div>
+                        </div>
+                            
+                        </div>
+       
+
+            <script src="/scripts.js"></script>
+
+    </body>
+
+     
+</html>
+
+{% endblock %}
