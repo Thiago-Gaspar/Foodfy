@@ -1,0 +1,214 @@
+body {
+min-height: 100%;
+min-width: 100%;
+margin: 0;
+padding: 0;
+font-family: "Roboto-regular", sans-serif;
+position: relative;
+background-color: white;
+
+
+}
+
+:root { 
+font-size: 62.5%;
+}
+
+#page-recipes {
+margin: 0 auto;
+max-width: 94rem;
+display: flex;
+flex-direction: column;
+}
+
+header {
+padding-top: 3.1rem;
+display: flex;
+width: 100%;
+
+}
+
+header img {
+margin-right: 12.4rem;
+width: 9.4rem;
+height: 3.2rem;
+}
+
+header div {
+padding-top: 0.7rem;
+}
+
+.about {
+padding-right: 3rem;
+text-decoration: none;
+width: 4.3rem;
+height: 1.9rem;
+line-height: 1.9rem;
+font-size: 1.6rem;
+font-weight: 400; 
+color: #111111;
+}
+
+.recipes {
+text-decoration: none;
+width: 6.2rem;
+height: 1.9rem;
+line-height: 1.9rem;
+font-size: 1.6rem;
+font-weight: 700;
+color: #111111;
+}
+
+.card {
+width: 94rem;
+height: 28rem;
+margin-top: 30px;
+
+}
+
+.card_image img{
+width: 100%;
+height: 100%;
+border-radius: 12px;
+
+}
+
+.card_title{
+display: flex;
+justify-content: center;
+}
+
+.card_title h1 {
+width: 100%;
+text-align: center;
+height: 4.2rem;
+font-size: 36px;
+font-weight: 700;
+line-height: 4.2rem;
+letter-spacing: 0;
+opacity: 100%;  
+color: #111111;
+margin: 5rem 0 0.4rem 0;
+}
+
+.card_author{
+display: flex;
+justify-content: center;
+margin-bottom: 2rem;
+}
+
+.card_author p{
+width: 14.7rem;
+height: 2.4rem;
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0;
+opacity: 100%;  
+color: #777777;
+margin: 0;
+
+}
+
+footer {
+width: 100%;
+height: 6.2rem;
+background: #eeeeee;
+position: absolute;
+top: 100%;
+margin-top: 50px;
+display: flex;
+right: 0;
+
+}
+
+footer p {
+margin: 0 auto;
+padding: 2.3rem;
+font-size: 14px;
+color: #999999;
+}
+
+.description {
+margin: 0;
+position: relative;
+display: flex;
+flex-direction: column;
+margin-top: 3rem;
+}
+
+.span {
+display: flex;
+position: relative;
+}
+
+.title_ingredients {
+
+margin: 0;
+font-size: 24px;
+color: #111111;
+}
+
+
+.title_preparation {
+
+margin: 0;
+font-size: 24px;
+color: #111111;
+
+}
+
+
+.title_information {
+
+margin: 0;
+color: #111111;
+font-size: 24px;
+}
+
+
+
+.content {
+
+width: 100%;
+margin-top: 2rem;
+
+}
+
+.content ul {
+font-size: 18px;
+line-height: 28px;
+margin: 0;
+color:#444444;
+font-weight: 400;
+padding-left: 18px;
+
+}
+
+.content p {
+font-size: 18px;
+line-height: 28px;
+margin: 0;
+color:#444444;
+font-weight: 400;
+}
+
+/* ===BUTTONS === */
+
+span {
+width: 61px;
+height: 14px;
+position: relative;
+top: 1.1rem;
+left: .8rem;
+font-weight: bold;
+font-size: 11px;
+color: #999999;
+cursor: pointer
+}
+
+/* ===CONTENT HIDDEN === */
+
+.content.hidden {
+    visibility: hidden
+}

@@ -1,153 +1,64 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"/>
+{% extends "layout.njk"%}
 
-    <link rel="icon" href="/images/chef.png" />
-    <link rel="stylesheet" href="/public/recipes.css" />
+    {% block head %}
+      
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <link rel="icon" href="/images/chef.png">
+   
+    <link rel="stylesheet" href="/recipes.css"/>
 
     <title>Receitas - Foodfy</title>
-  </head>
+   
+    {% endblock %}
 
-  <body>
+    {% block content %}
+  
     
     <div id="page-recipes">
     <header>
-        <a href="home.njk"><img src="/images/logo.png" alt="Logo"> </a>      
+        <a href="/"><img src="/images/logo.png" alt="Logo"> </a>      
 
       <div>
-        <a class="about" href="about.njk">Sobre</a>
-        <a class="recipes" href="recipes.njk">Receitas</a>
+        <a class="about" href="/about">Sobre</a>
+        <a class="recipes" href="/recipes">Receitas</a>
       </div>
     </header>
 
     <div class="cards">
-     
-      <div class="card">  
+        {% for item in items %}
+      <div class="card" id="{{loop.index0}}"> 
         <div class="card_image">
-          <img src="/images/burger.png" alt="Burger"/>
+          <img src="{{item.image}}" alt="Burger"/>
         </div>
 
-        <div class="card_title"><h1>Triplo bacon burger</h1></div>
-        <div class="card_author"><p>por Jorge Relato</p></div>
+        <div class="card_title"><h1>{{item.title}}</h1></div>
+        <div class="card_author"><p>{{item.author}}</p></div>
       </div>
+      {% endfor %}  
 
+      {% for item in items %}
+      <div class="card" id="{{loop.index0}}">  
+        <div class="card_image">
+          <img src="{{item.image}}" alt="Burger"/>
+        </div>
 
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/pizza.png" alt="Burger"/>
-        <div class="card_title"><h1>Pizza 4 estações</h1></div>
-        <div class="card_author"><p>por Fabiana Melo</p></div>
-        </div>
+        <div class="card_title"><h1>{{item.title}}</h1></div>
+        <div class="card_author"><p>{{item.author}}</p></div>
       </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/espaguete.png" alt="Burger"/>
-        <div class="card_title"><h1>Espaguete ao alho</h1></div>
-        <div class="card_author"><p>por Júlia Kinoto</p></div>
-        </div>
+      {% endfor %}  
       </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/lasanha.png" alt="Burger"/>
-        <div class="card_title"><h1>Lasanha mac n’ cheese</h1></div>
-        <div class="card_author"><p>por Juliano Vieira</p></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/doce.png" alt="Burger"/>
-        <div class="card_title"><h1>Docinhos pão-do-céu</h1></div>
-        <div class="card_author"><p>por Ricardo Golvea</p></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/asinhas.png" alt="Burger"/>
-        <div class="card_title"><h1>Asinhas de frango ao barbecue</h1></div>
-        <div class="card_author"><p>por Vania Steroski</p></div>
-        </div>
-      </div>
-  
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/burger.png" alt="Burger" />
-        <div class="card_title"><h1>Triplo bacon burger</h1></div>
-        <div class="card_author"><p>por Jorge Relato</p></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/pizza.png" alt="Burger" />
-        <div class="card_title"><h1>Pizza 4 estações</h1></div>
-        <div class="card_author"><p>por Fabiana Melo</p></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/espaguete.png" alt="Burger" />
-        <div class="card_title"><h1>Espaguete ao alho</h1></div>
-        <div class="card_author"><p>por Júlia Kinoto</p></div>
-        </div>
-      </div>
-
-      <div class="card"> 
-        <div class="card_image">
-        <img src="/images/lasanha.png" alt="Burger" />
-        <div class="card_title"><h1>Lasanha mac n’ cheese</h1></div>
-        <div class="card_author"><p>por Juliano Vieira</p></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/doce.png" alt="Burger" />
-        <div class="card_title"><h1>Docinhos pão-do-céu</h1></div>
-        <div class="card_author"><p>por Ricardo Golvea</p></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card_image">
-        <img src="/images/asinhas.png" alt="Burger" />
-        <div class="card_title"><h1>Asinhas de frango ao barbecue</h1></div>
-        <div class="card_author"><p>por Vania Steroski</p></div>
-        </div>
-      </div>
-   
-</div>
 
 <footer>
   <p>Todos direitos reservados, receitas Foodfy.</p>
 </footer>
 
-    <div class="modal-overlay">
-        <div class="modal">
-         
-          <div class="card_image">
-            <img src="" alt=""/>
-          </div>
-          <div class="card_title"><h1></h1></div>
-          <div class="card_author"><p></p></div>
-         
-          <div class="close">
-            <a><p>Fechar Modal</p></a>
-          </div>
-        </div>
-            
-        </div>
     </div>
 
    
 
     <script src="/scripts.js"></script>
 
-  </body>
-</html>
+ 
+{% endblock %}

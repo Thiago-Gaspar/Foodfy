@@ -1,3 +1,5 @@
+{% extends "layout.njk"%}
+{% block content %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,7 +10,7 @@
 
 
         <link rel="icon" href="/images/chef.png">
-        <link rel="stylesheet" href="/public/about.css">
+        <link rel="stylesheet" href="/about.css">
 
        
         <title>
@@ -20,11 +22,11 @@
                    
         <div id="page-about">
             <header>
-                <a href="home.njk"><img src="/images/logo.png" alt="Logo"> </a>      
+                <a href="/"><img src="/images/logo.png" alt="Logo"> </a>      
         
               <div>
-                <a class="about" href="about.njk">Sobre</a>
-                <a class="recipes" href="recipes.njk">Receitas</a>
+                <a class="about" href="/about">Sobre</a>
+                <a class="recipes" href="/recipes">Receitas</a>
               </div>
             </header>
                        
@@ -77,3 +79,5 @@
     </body>
 
 </html>
+
+{% endblock %}

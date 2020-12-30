@@ -1,0 +1,97 @@
+{% extends "layout.njk"%}
+
+{% block head %}
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+  <link rel="icon" href="/images/chef.png">
+
+  <link rel="stylesheet" href="/recipe.css"/>
+
+  <title>Receitas - Foodfy</title>
+
+{% endblock %}
+
+{% block content %}
+
+  <div id="page-recipes">
+    <header>
+      <a href="/"><img src="/images/logo.png" alt="Logo">
+      </a>
+
+      <div>
+        <a class="about" href="/about">Sobre</a>
+        <a class="recipes" href="/recipes">Receitas</a>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="card_image">
+        <img src="{{item.image}}" alt="Burger"/>
+      </div>
+    </div>
+
+    <div class="card_title">
+      <h1>{{item.title}}</h1>
+    </div>
+    <div class="card_author">
+      <p>{{item.author}}</p>
+    </div>
+
+    <div class="description">
+
+      <div class="span">
+      <h1 class="title_ingredients">Ingredientes </h1>
+
+       <span>ESCONDER</span>
+     </div>
+
+      <div class="content">
+        <ul>
+          {% for ingredients in item.ingredients %}
+            <li>{{ingredients}}</li>
+            {%endfor%}
+
+          </ul>
+      </div>
+    </div>
+
+      <div class="description">
+
+        <div class="span">
+        <h1 class="title_preparation">Modo de preparo  </h1>
+
+        <span>ESCONDER</span>
+       </div>
+
+        <div class="content">
+          <ul>
+            {% for preparation in item.preparation %}
+              <li>{{preparation}}</li>
+              {%endfor%}
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="description">
+
+            <div class="span">
+          <h1 class="title_information">Informações adicionais</h1>
+          <span>ESCONDER</span>
+              </div>
+
+          <div class="content">
+            <p>{{item.information}}</p>
+          </div>
+        </div>
+        <footer>
+          <p>Todos direitos reservados, receitas Foodfy.</p>
+        </footer>
+
+      </div>
+
+      <script src ="/recipe.js"></script>
+
+    {% endblock %}
